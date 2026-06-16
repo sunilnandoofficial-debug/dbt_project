@@ -41,6 +41,8 @@ models:
       +materialized: table
     # Config indicated by + and applies to all files under models/example/
     example:
+      +database: SUNIL_DBT_CORE
+      +schema: public
       +materialized: view
     bootcamp:
       +database: SUNIL_DBT_CORE             # ✅ Your final/cleansing layer
