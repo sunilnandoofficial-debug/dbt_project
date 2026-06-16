@@ -2,11 +2,11 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'dbt_learn_repos'
+name: 'dbt_project'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'dbt_learn_repos'
+profile: 'dbt_project'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -30,20 +30,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
-  dbt_learn_repos:
+  dbt_project:
     staging:
-      +database: DBT_PRACTICE
+      +database: SUNIL_DBT_CORE
       +materialized: view
     
     cleansing:
-      +database: DBT_PRACTICE
+      +database: SUNIL_DBT_CORE
       +schema: cleansing               
       +materialized: table
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
     bootcamp:
-      +database: DBT_PRACTICE             # ✅ Your final/cleansing layer
+      +database: SUNIL_DBT_CORE             # ✅ Your final/cleansing layer
       +schema: RAW_LAYER
       +materialized: table
 
