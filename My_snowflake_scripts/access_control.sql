@@ -2,7 +2,7 @@ CREATE USER tiku PASSWORD='StrongPass123';
 CREATE ROLE analyst_role;
 
 -- Grant warehouse access
-GRANT USAGE ON WAREHOUSE compute_wh TO ROLE analyst_role; --Sunil
+GRANT USAGE ON WAREHOUSE compute_wh TO ROLE analyst_role;
 
 -- Grant database access
 GRANT USAGE ON DATABASE sunil_test TO ROLE analyst_role;
